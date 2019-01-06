@@ -62,6 +62,7 @@ public final class PaymentMethod implements PersistablePayload, Comparable {
     public static final String POPMONEY_ID = "POPMONEY";
     public static final String REVOLUT_ID = "REVOLUT";
     public static final String PERFECT_MONEY_ID = "PERFECT_MONEY";
+    public static final String SWIFT_ID = "SWIFT";
     public static final String SEPA_ID = "SEPA";
     public static final String SEPA_INSTANT_ID = "SEPA_INSTANT";
     public static final String FASTER_PAYMENTS_ID = "FASTER_PAYMENTS";
@@ -93,6 +94,7 @@ public final class PaymentMethod implements PersistablePayload, Comparable {
     public static PaymentMethod POPMONEY;
     public static PaymentMethod REVOLUT;
     public static PaymentMethod PERFECT_MONEY;
+    public static PaymentMethod SWIFT;
     public static PaymentMethod SEPA;
     public static PaymentMethod SEPA_INSTANT;
     public static PaymentMethod FASTER_PAYMENTS;
@@ -184,6 +186,7 @@ public final class PaymentMethod implements PersistablePayload, Comparable {
 
             ALL_VALUES = new ArrayList<>(Arrays.asList(
                     // EUR
+                    SWIFT = new PaymentMethod(SWIFT_ID, 14 * DAY, maxTradeLimitMidRisk),
                     SEPA = new PaymentMethod(SEPA_ID, 6 * DAY, maxTradeLimitMidRisk),
                     SEPA_INSTANT = new PaymentMethod(SEPA_INSTANT_ID, DAY, maxTradeLimitMidRisk),
                     MONEY_BEAM = new PaymentMethod(MONEY_BEAM_ID, DAY, maxTradeLimitHighRisk),
